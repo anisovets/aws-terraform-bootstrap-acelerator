@@ -1,4 +1,3 @@
-# aws-terraform-bootstrap-acelerator
 # Terraform Bootstrap Project
 
 This Terraform project sets up essential infrastructure for managing and storing Terraform state and locking in AWS. It provisions an S3 bucket for storing the Terraform state and a DynamoDB table for state locking.
