@@ -20,5 +20,5 @@ variable "aws_dynamodb_table" {
 variable "service_user" {
     description = "IAM Service User Name"
     type = string
-    default = "service user"
+    default = "serv_user"
 }
