@@ -52,6 +52,15 @@ resource "aws_iam_policy" "iam_policy" {
         ],
         Effect   = "Allow",
         Resource = "*"
+      }, 
+      {
+        Effect =  "Allow",
+        Action = [
+        "s3:ListBucket",
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "Resource": "arn:aws:s3:::yaru-labs-terraform-state"
       }
     ]
   })
