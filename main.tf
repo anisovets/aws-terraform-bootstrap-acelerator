@@ -59,12 +59,12 @@ resource "aws_iam_policy" "iam_policy" {
         "s3:GetObject",
         "s3:PutObject"
       ],
-      "Resource": "arn:aws:s3:::yaru-labs-terraform-state/*"
+      "Resource": "arn:aws:s3:::${var.s3-terraform-state-bucket-name}/*"
       },
       {
         Effect = "Allow",
         Action = "s3:ListBucket",
-        Resource = "arn:aws:s3:::yaru-labs-terraform-state"
+        Resource = "arn:aws:s3:::${var.s3-terraform-state-bucket-name}"
       },
       {
         Effect = "Allow",
@@ -73,7 +73,7 @@ resource "aws_iam_policy" "iam_policy" {
           "dynamodb:PutItem",
           "dynamodb:DeleteItem"
         ],
-        Resource = "arn:aws:dynamodb:us-east-1:389969266741:table/TerraformLocks"
+        Resource = "arn:aws:dynamodb:${var.region}:${var.aws_account_id}:table/${var.aws_dynamodb_table}"
       }
     ]
   })

@@ -22,3 +22,9 @@ variable "service_user" {
     type = string
     default = "serv_user"
 }
+
+variable "aws_account_id" {
+    description = "The AWS Account ID"
+    type = string
+    default = "389969266741"
+}
