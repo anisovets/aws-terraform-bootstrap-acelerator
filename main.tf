@@ -48,7 +48,9 @@ resource "aws_iam_policy" "iam_policy" {
           "iam:GetUser",
           "iam:DeleteUserPolicy",
           "iam:ListAccessKeys",
-          "iam:GetUserPolicy"
+          "iam:GetUserPolicy",
+          "iam:UntagUser",
+          "iam:CreatePolicy "
         ],
         Effect   = "Allow",
         Resource = "*"
